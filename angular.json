@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hastalosandares-web"
+    }
+  },
+  "defaultProject": "hastalosandares-web",
+  "cli": {
+    "analytics": false
+  }
 }

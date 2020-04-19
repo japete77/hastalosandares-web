@@ -1,0 +1,8 @@
+@font-face {font-family: "Old English Text MT V2";
+    src: url("old_english_text_mt_v2.eot"); /* IE9*/
+    src: url("old_english_text_mt_v2.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("old_english_text_mt_v2.woff2") format("woff2"), /* chrome、firefox */
+    url("old_english_text_mt_v2.woff") format("woff"), /* chrome、firefox */
+    url("old_english_text_mt_v2.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("old_english_text_mt_v2.svg#Old English Text MT V2") format("svg"); /* iOS 4.1- */
+  }
