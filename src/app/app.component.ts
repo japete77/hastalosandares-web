@@ -12,9 +12,12 @@ import { MenuItem } from 'src/models/menu-item';
 })
 export class AppComponent {
   title = 'Hasta Los Andares'
+  mobile = '600 09 69 22'
+  phone = '951 00 00 00'
+  email = 'info@hastalosandares.com'
   cart: Cart
   selectedCategory: string = 'IBÉRICOS'
-  selectedSize: string = 'TAPA'
+  selectedSize: string = 'TABLA'
   order: OrderMenu = new OrderMenu()
   warning: string;
   validCP = [ '29001', '29002' ];
@@ -25,7 +28,16 @@ export class AppComponent {
   }
 
   getProducts(category: string, size: string) {
-    var filtered = this.cart.menu.filter(f => f.categoria == category).sort()
+    var filtered : Array<MenuItem>;
+    if (size == 'TAPA') 
+      filtered = this.cart.menu.filter(f => f.categoria == category && f.tapa > 0).sort()
+    else if (size == 'TOSTADA') 
+      filtered = this.cart.menu.filter(f => f.categoria == category && f.tostada > 0).sort()
+    else if (size == 'MEDIA TABLA') 
+      filtered = this.cart.menu.filter(f => f.categoria == category && f.media_tabla > 0).sort()
+    else if (size == 'TABLA') 
+      filtered = this.cart.menu.filter(f => f.categoria == category && f.tabla > 0).sort()
+
     return filtered.map(item => {
       return {
         product: item.producto,
@@ -113,8 +125,26 @@ export class AppComponent {
     }
   }
 
+  getOrderItems() {
+    var result = '';
+    for (var i = 0; i < this.order.items.length; i++) {
+      result += `${this.order.items[i].product} (${this.order.items[i].size}) ${this.order.items[i].price} €
+`
+    }
+    return result;
+  }
+
   getWhatsAppOrderLink() {
-    return `https://wa.me/34600096922?text=Prueba`; 
+    var order = `PEDIDO:
+${this.getOrderItems()}
+TOTAL: ${this.getTotal()} €
+
+ENVIAR A:
+${this.order.name}
+${this.order.address}
+${this.order.cp}
+`
+    return `https://wa.me/34${this.mobile}?text=${encodeURIComponent(order)}`; 
   }
 
   isVisibleOrderButton() {

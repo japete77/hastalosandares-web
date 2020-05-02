@@ -1,18 +1,12 @@
 <header>
     <div class="container">
-        <a class="logo" href="#"><img src="assets/images/logo_ha_gold_black.png" alt="Logo"></a>
-
-        <div class="right-area">
-            <h6 class="plr-20 color-white btn-fill-primary">
-                SERVICIO A DOMICLIO
-            </h6>
-        </div><!-- right-area -->
 
         <a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
 
-        <ul class="main-menu font-mountainsre" id="main-menu">
-            <li><a href="index.html">INICIO</a></li>
+        <ul class="main-menu font-mountainsre" id="main-menu">            
             <li><a href="#ourhistory">SOBRE NOSOTROS</a></li>
+            <li><a href="#suggestions">SUGERENCIAS</a></li>
+            <li><a href="#menu">CARTA</a></li>
             <li><a href="#contact">CONTACTA</a></li>
         </ul>
 
@@ -26,7 +20,7 @@
     <div class="container h-100">
         <div class="dplay-tbl">
             <div class="dplay-tbl-cell center-text color-gold">
-
+                <img src="assets/images/logo_ha_gold_black.png" alt="Logo" class="logo">
                 <!-- <h5><b>El mayor contrario que el amor tiene es el hambre y la continua necesidad.</b></h5> -->
                 <h1 class="mt-30 mb-15">...hasta los andares</h1>
                 <h5><a href="#menu" class="btn-primaryc plr-25"><b>VER NUESTRA CARTA</b></a></h5>
@@ -47,32 +41,35 @@
 
         <div class="row">
             <div class="col-md-6">
-                <p class="mb-30">Maecenas fermentum tortor id fringilla molestie. In hac habitasse
-                    platea dictumst. Morbi maximus
-                    lobortis ipsum, ut blandit augue ullamcorper vitae.
-                    Nulla dignissim leo felis, eget cursus elit aliquet ut. Curabitur vel convallis
-                    massa. Morbi tellus
-                    tortor, luctus et lacinia non, tincidunt in lacus.
-                    Vivamus sed ligula imperdiet, feugiat magna vitae, blandit ex. Vestibulum id
-                    dapibus dolor, ac
-                    cursus nulla. </p>
-            </div><!-- col-md-6 -->
-
+                <p class="mb-30"><b>…Hasta los Andares ®</b> es una marca relacionada con productos ibéricos de alta calidad: jamones, 
+                    embutidos, cecinas, caza… Tenemos más de cien vinos, quesos, productos gourmet… Los establecimientos: tabernas, 
+                    tiendas delicatessen, jamonerías… ofrecen un servicio de alta calidad que es lo que nos motiva permanentemente. 
+                    Todo intenta girar en torno a la figura de Miguel de Cervantes, icono emblemático de nuestro país.
+                </p>
+                <p class="mb-30">
+                    Tenemos más de 30 años de experiencia en el sector. Empezamos en Ciudad Real con varios establecimientos de
+                    mesones - jamonerías como las tabernas flamencas «El Bulerías», y el más emblemático «La Maestranza del Jamón» 
+                    durante varios años.
+                </p>
+            </div>
             <div class="col-md-6">
-                <p class="mb-30">Maecenas fermentum tortor id fringilla molestie. In hac habitasse
-                    platea
-                    dictumst.Morbi maximus lobortis ipsum, ut blandit augue ullamcorper vitae.
-                    Nulla dignissim leo felis, eget cursus elit aliquet ut. Curabitur vel
-                    convallismassa. Morbi tellus tortor, luctus et lacinia non, tincidunt in lacus.
-                    Vivamus sed ligula imperdiet, feugiat magna vitae, blandit ex. Vestibulumidda
-                    pibus dolor, accursus nulla. </p>
-            </div><!-- col-md-6 -->
-        </div><!-- row -->
-    </div><!-- container -->
+                <p class="mb-30">
+                    Luego se abrió en Tarragona la tienda de Centro Ibérico y otro mesón ibérico llamado «Calígula», ampliando a Barcelona
+                    Centro Ibérico en el barrio de Gracia, lo más castizo de la ciudad en el centro. Volvimos a Ciudad Real, 
+                    donde abrimos una taberna y una tienda delicatessen.
+                </p>
+                <p class="mb-30">
+                    Actualmente hemos ampliado nuestras fronteras y nos hemos expandido por las ciudades más importantes de España contando 
+                    con tabernas en Madrid, Ciudad Real, Barcelona y Málaga y dos Centros Ibéricos, uno en Ciudad Real y el principal 
+                    <b>Centro Ibérico Hasta los Andares</b> en Málaga.
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
 
 
-<section id="menu" class="story-area bg-seller color-white pos-relative">
+<section id="suggestions" class="story-area bg-seller color-white pos-relative">
     <div class="pos-bottom triangle-up"></div>
     <div class="pos-top triangle-bottom"></div>
     <div class="container">
@@ -82,7 +79,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-3 col-md-4  col-sm-6 ">
+            <div *ngFor="let menuitem of getProducts('SUGERENCIAS', 'TABLA')" class="col-lg-3 col-md-4 col-sm-6">
                 <div class="center-text mb-30">
                     <div class="ïmg-200x mlr-auto pos-relative">
                         <h6 class="ribbon-cont">
@@ -90,8 +87,8 @@
                         </h6>
                         <img src="assets/images/seller-2-200x200.png" alt="">
                     </div>
-                    <h5 class="mt-20">Pizza Margherita</h5>
-                    <h4 class="mt-5"><b>$11.90</b></h4>
+                    <h5 class="mt-20">{{menuitem.product}}</h5>
+                    <h4 class="mt-5"><b>{{menuitem.price | number:'1.2-2'}} €</b></h4>
                     <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order
                                 Now</b></a></h6>
                 </div>
@@ -102,7 +99,7 @@
 </section>
 
 
-<section>
+<section id="menu" class="bg-menu">
     <div class="container">
         <div class="heading">
             <img class="heading-img" src="assets/images/logo_ha_black_gold.png" alt="">
@@ -159,7 +156,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <ul class="selecton-size brdr-b-primary-4 mb-30">
-                            <li [ngClass]="selectedSize=='TAPA' ? 'active' : ''" (click)="selectSize('TAPA')">
+                            <!-- <li [ngClass]="selectedSize=='TAPA' ? 'active' : ''" (click)="selectSize('TAPA')">
                                 <img src="assets/images/tapa.png" />
                                 <a href="" onclick="return false;">
                                     <b>TAPA</b>
@@ -170,11 +167,11 @@
                                 <a href="" onclick="return false;">
                                     <b>TOSTADA</b>
                                 </a>
-                            </li>
+                            </li> -->
                             <li [ngClass]="selectedSize=='MEDIA TABLA' ? 'active' : ''" (click)="selectSize('MEDIA TABLA')">
                                 <img src="assets/images/media_tabla.png" />
                                 <a href="" onclick="return false;">
-                                    <b>MEDIA TABLA</b>
+                                    <b>&#189; TABLA</b>
                                 </a>
                             </li>
                             <li [ngClass]="selectedSize=='TABLA' ? 'active' : ''" (click)="selectSize('TABLA')">
@@ -196,7 +193,7 @@
                     <div class="s-right">
                         <h5 class="mb-10">
                             <b>{{menuitem.product}}</b>
-                            <b class="color-primary float-right">{{menuitem.price}} €</b>
+                            <b class="color-primary float-right">{{menuitem.price | number:'1.2-2'}} €</b>
                         </h5>
                         <h6 class="mb-10">
                             <span class="icon-allergens" *ngFor="let allergen of menuitem.allergens">
@@ -267,13 +264,22 @@
         </div>
 
         <div class="pt-30">
+            <p class="underline-secondary mb-10"><b>Horario:</b></p>
+            <a href="" onclick="return false;">Lunes y Miércoles: 12:00-16:00 y 19:00-00:00<br>
+                Martes: Cerrado<br>
+                Jueves a Domingos: 12:00 a 00:00
+            </a>
+        </div>
+
+        <div class="pt-30">
             <p class="underline-secondary mb-10"><b>Teléfono:</b></p>
-            <a href="tel:+53 345 7953 32453 ">+53 345 7953 32453 </a>
+            <a href="tel:{{phone}}">{{phone}}</a><br>
+            <a href="tel:{{mobile}}">{{mobile}}</a>
         </div>
 
         <div class="pt-30">
             <p class="underline-secondary mb-10"><b>Email:</b></p>
-            <a href="mailto:yourmail@gmail.com"> info@hastalosandares.net</a>
+            <a href="mailto:{{email}}">{{email}}</a>
         </div>
 
         <h6 class="center-text mt-40 mt-sm-20 mb-30">

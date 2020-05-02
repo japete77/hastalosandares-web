@@ -7,12 +7,12 @@
 				"soja",
 				"lacteos"
 			],
-			"descripcion": "",
-			"foto": "menu-6-120x120.jpg",
+			"descripcion": 0,
+			"foto": 0,
 			"tapa": 0,
-			"tostada": 7,
-			"media_tabla": 10.5,
-			"tabla": 18
+			"tostada": 0,
+			"media_tabla": 7,
+			"tabla": 13.5
 		},
 		{
 			"producto": "Surtido ibérico bellota",
@@ -22,12 +22,779 @@
 				"soja",
 				"lacteos"
 			],
-			"descripcion": "",
-			"foto": "menu-1-120x120.jpg",
+			"descripcion": 0,
+			"foto": 0,
 			"tapa": 0,
 			"tostada": 0,
-			"media_tabla": 15,
-			"tabla": 25
+			"media_tabla": 10,
+			"tabla": 18.5
+		},
+		{
+			"producto": "Jamón ibérico",
+			"categoria": "IBÉRICOS",
+			"alergenos": [ ],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 6,
+			"tabla": 12
+		},
+		{
+			"producto": "Jamón ibérico de bellota",
+			"categoria": "IBÉRICOS",
+			"alergenos": [ ],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 10,
+			"tabla": 18
+		},
+		{
+			"producto": "Lomo ibérico",
+			"categoria": "IBÉRICOS",
+			"alergenos": [ ],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5,
+			"tabla": 8
+		},
+		{
+			"producto": "Lomo ibérico de bellota",
+			"categoria": "IBÉRICOS",
+			"alergenos": [ ],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 8,
+			"tabla": 12
+		},
+		{
+			"producto": "salchichón ibérico de bellota",
+			"categoria": "IBÉRICOS",
+			"alergenos": [
+				"soja",
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 4,
+			"tabla": 7
+		},
+		{
+			"producto": "Solomillo ibérico de bellota",
+			"categoria": "IBÉRICOS",
+			"alergenos": [ ],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 8,
+			"tabla": 14
+		},
+		{
+			"producto": "Morcón ibérico de bellota",
+			"categoria": "IBÉRICOS",
+			"alergenos": [
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5,
+			"tabla": 9
+		},
+		{
+			"producto": "Morcilla ibérica",
+			"categoria": "IBÉRICOS",
+			"alergenos": [
+				"sulfitos",
+				"soja",
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 4,
+			"tabla": 7
+		},
+		{
+			"producto": "Chorizo picante",
+			"categoria": "IBÉRICOS",
+			"alergenos": [
+				"sulfitos",
+				"soja",
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 4,
+			"tabla": 7
+		},
+		{
+			"producto": "Chorizo ibérico de bellota",
+			"categoria": "IBÉRICOS",
+			"alergenos": [
+				"sulfitos",
+				"soja",
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 4,
+			"tabla": 7
+		},
+		{
+			"producto": "Achorizada ibérica",
+			"categoria": "IBÉRICOS",
+			"alergenos": [
+				"sulfitos",
+				"soja",
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 4,
+			"tabla": 7
+		},
+		{
+			"producto": "Patatera",
+			"categoria": "IBÉRICOS",
+			"alergenos": [
+				"sulfitos",
+				"soja",
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 4,
+			"tabla": 6
+		},
+		{
+			"producto": "Longaniza de vic",
+			"categoria": "IBÉRICOS",
+			"alergenos": [
+				"soja",
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5,
+			"tabla": 9
+		},
+		{
+			"producto": "Fuet de vic",
+			"categoria": "IBÉRICOS",
+			"alergenos": [
+				"soja",
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5,
+			"tabla": 9
+		},
+		{
+			"producto": "Cabrales ",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 7,
+			"tabla": 10
+		},
+		{
+			"producto": "Idiazábal",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 7,
+			"tabla": 10
+		},
+		{
+			"producto": "Manchego p.de oveja viejo",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5.5,
+			"tabla": 10
+		},
+		{
+			"producto": "Manchego p.de oveja ACEITE",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5.5,
+			"tabla": 10
+		},
+		{
+			"producto": "Manchego p.oveja curado",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5.5,
+			"tabla": 10
+		},
+		{
+			"producto": "Manchego viejo en manteca",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5.5,
+			"tabla": 10
+		},
+		{
+			"producto": "Manchego p. oveja semi",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5,
+			"tabla": 9
+		},
+		{
+			"producto": "Queso semi con membrillo",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 4.5,
+			"tabla": 0
+		},
+		{
+			"producto": "Queso con trufa Melanosporum",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 13.5,
+			"tabla": 18.5
+		},
+		{
+			"producto": "Queso al romero",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5.5,
+			"tabla": 10
+		},
+		{
+			"producto": "Queso con chili",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5.5,
+			"tabla": 10
+		},
+		{
+			"producto": "Queso al brandy",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5.5,
+			"tabla": 10
+		},
+		{
+			"producto": "Queso payoyo cabra",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 5.5,
+			"tabla": 10
+		},
+		{
+			"producto": "Surtido de quesos",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": "6 clases de quesos",
+			"foto": "surtido_quesos.jpg",
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 13
+		},
+		{
+			"producto": "Medio de quesos",
+			"categoria": "QUESOS",
+			"alergenos": [
+				"lacteos",
+				"huevos"
+			],
+			"descripcion": "5 quesos",
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 8,
+			"tabla": 0
+		},
+		{
+			"producto": "Anchoas del cantabrico \"00\"",
+			"categoria": "AHUMADOS Y SALAZÓN",
+			"alergenos": [
+				"pescado"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 8.5,
+			"tabla": 17
+		},
+		{
+			"producto": "Huevas de maruca",
+			"categoria": "AHUMADOS Y SALAZÓN",
+			"alergenos": [
+				"pescado"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 9,
+			"tabla": 16
+		},
+		{
+			"producto": "Huevas de atún",
+			"categoria": "AHUMADOS Y SALAZÓN",
+			"alergenos": [
+				"pescado"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 9,
+			"tabla": 16
+		},
+		{
+			"producto": "Mojama",
+			"categoria": "AHUMADOS Y SALAZÓN",
+			"alergenos": [
+				"pescado"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 9.5,
+			"tabla": 17
+		},
+		{
+			"producto": "Cecina de león (ternera)",
+			"categoria": "CECINAS",
+			"alergenos": [ ],
+			"descripcion": 0,
+			"foto": "cecina_ternera.jpg",
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 6,
+			"tabla": 10
+		},
+		{
+			"producto": "Cecina de ciervo",
+			"categoria": "CECINAS",
+			"alergenos": [
+				"sulfitos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 7,
+			"tabla": 11
+		},
+		{
+			"producto": "Cecina de jabali",
+			"categoria": "CECINAS",
+			"alergenos": [
+				"sulfitos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 7,
+			"tabla": 11
+		},
+		{
+			"producto": "Surtidos de cecinas",
+			"categoria": "CECINAS",
+			"alergenos": [
+				"sulfitos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 9,
+			"tabla": 16
+		},
+		{
+			"producto": "Chorizo de ciervo",
+			"categoria": "EMBUTIDOS DE CAZA",
+			"alergenos": [
+				"sulfitos",
+				"soja",
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 4.5,
+			"tabla": 8
+		},
+		{
+			"producto": "Salchichòn de ciervo",
+			"categoria": "EMBUTIDOS DE CAZA",
+			"alergenos": [
+				"soja",
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 4.5,
+			"tabla": 8
+		},
+		{
+			"producto": "chorizo de jabalí",
+			"categoria": "EMBUTIDOS DE CAZA",
+			"alergenos": [
+				"sulfitos",
+				"soja",
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 4.5,
+			"tabla": 8
+		},
+		{
+			"producto": "salchichòn de jabalí",
+			"categoria": "EMBUTIDOS DE CAZA",
+			"alergenos": [
+				"soja",
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 4.5,
+			"tabla": 8
+		},
+		{
+			"producto": "Solomillo de orza",
+			"categoria": "IBÉRICOS DE ORZA",
+			"alergenos": [ ],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 9.5
+		},
+		{
+			"producto": "Lomo de orza",
+			"categoria": "IBÉRICOS DE ORZA",
+			"alergenos": [ ],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 9.5
+		},
+		{
+			"producto": "Presa de orza",
+			"categoria": "IBÉRICOS DE ORZA",
+			"alergenos": [ ],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 11.5
+		},
+		{
+			"producto": "Milhojas de berenjena con queso parmegiano",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [
+				"lacteos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 8.5
+		},
+		{
+			"producto": "Secreto de ciervo",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [ ],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 9
+		},
+		{
+			"producto": "Pisto manchego con bonito del norte",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [
+				"pescado"
+			],
+			"descripcion": "dos raciones",
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 16
+		},
+		{
+			"producto": "Mejillones",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [
+				"moluscos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 7.5
+		},
+		{
+			"producto": "Almejas",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [
+				"moluscos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 20
+		},
+		{
+			"producto": "Berberechos",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [
+				"moluscos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 16
+		},
+		{
+			"producto": "Ensalada hasta los andares",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [
+				"lacteos",
+				"huevos",
+				"pescado"
+			],
+			"descripcion": "Cogollos de tudela, anchoas, tomate cherry, bonito, queso cabra payoyo, esparragos de navarra y redución de módena.",
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 10
+		},
+		{
+			"producto": "Ensalada de perdiz",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [ ],
+			"descripcion": "Perdiz dehuesada, tomate de ensalada, sal de escamas, y aceite de oliva extra ",
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 11
+		},
+		{
+			"producto": "Ensalada de ventresca",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [
+				"pescado"
+			],
+			"descripcion": "Ventresca, tomate de ensalada y aceite extra",
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 9
+		},
+		{
+			"producto": "Boquerones en vinagre",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [
+				"pescado"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 0
+		},
+		{
+			"producto": "Bloc foie francés de pato 65 gramos",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [
+				"sulfitos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 10
+		},
+		{
+			"producto": "Bloc foie francés de pato 100 gramos",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [
+				"sulfitos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 14
+		},
+		{
+			"producto": "Bloc foiefrancés de oca 65 gramos",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [
+				"sulfitos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 14
+		},
+		{
+			"producto": "Bloc de foie francés de oca 100 gramos",
+			"categoria": "SUGERENCIAS",
+			"alergenos": [
+				"sulfitos"
+			],
+			"descripcion": 0,
+			"foto": 0,
+			"tapa": 0,
+			"tostada": 0,
+			"media_tabla": 0,
+			"tabla": 16
 		}
 	]
 }

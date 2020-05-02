@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 { line-height: 1.5; font-weight: inherit; }
 
 h1, h2, h3, .font-beyond { font-family: 'Old English Text MT V2', sans-serif; }
 
-p { line-height: 1.7; font-size: 1.05em; font-weight: 400; color: #555; }
+p { line-height: 1.7; font-size: 1.2em; font-weight: 400; color: #555; }
 
 h1 { font-size: 7.5em; line-height: 1.4; }
 
@@ -139,7 +139,7 @@ header {
         right: 0;
         text-align: center;
         z-index: 1000;
-        padding: 25px 0;
+        padding: 5px 0;
         font-weight: 600;
         color: #fff;
 }
@@ -286,7 +286,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
         }
 
         header ul.main-menu > li > a {
-                padding: 0 5px;
+                padding: 0 30px;
                 line-height: 60px;
         }
 
@@ -784,6 +784,10 @@ section {
 .bg-seller{ background: url(assets/images/menu-back-1.jpg)  no-repeat; background-size: cover; position: relative; z-index: 1; }
 
 .bg-seller:after{ content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background: rgba(0,0,0,.70); }
+
+.bg-menu{ background: url(assets/images/menu-back-2.jpg)  no-repeat; background-size: cover; position: relative; z-index: 1; }
+
+.bg-menu:after{ content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background: rgba(255,255,255,.80); }
 
 .bg-191 { background: #191919; }
 
@@ -7440,4 +7444,8 @@ ul.icon li a{ padding: 10px;  }
 .order-warning {
         color: red;
         text-align: center;
+}
+
+.logo {
+    width: 15%;
 }
