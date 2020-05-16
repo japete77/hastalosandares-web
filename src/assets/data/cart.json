@@ -8,7 +8,7 @@
 				"lacteos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "surtido_iberico.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 7,
@@ -23,7 +23,7 @@
 				"lacteos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "jamon_iberico_bellota.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 10,
@@ -32,7 +32,9 @@
 		{
 			"producto": "Jamón ibérico",
 			"categoria": "IBÉRICOS",
-			"alergenos": [ ],
+			"alergenos": [
+				0
+			],
 			"descripcion": 0,
 			"foto": 0,
 			"tapa": 0,
@@ -43,7 +45,9 @@
 		{
 			"producto": "Jamón ibérico de bellota",
 			"categoria": "IBÉRICOS",
-			"alergenos": [ ],
+			"alergenos": [
+				0
+			],
 			"descripcion": 0,
 			"foto": 0,
 			"tapa": 0,
@@ -54,7 +58,9 @@
 		{
 			"producto": "Lomo ibérico",
 			"categoria": "IBÉRICOS",
-			"alergenos": [ ],
+			"alergenos": [
+				0
+			],
 			"descripcion": 0,
 			"foto": 0,
 			"tapa": 0,
@@ -65,23 +71,25 @@
 		{
 			"producto": "Lomo ibérico de bellota",
 			"categoria": "IBÉRICOS",
-			"alergenos": [ ],
+			"alergenos": [
+				0
+			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "lomo_iberico_bellota.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 8,
 			"tabla": 12
 		},
 		{
-			"producto": "salchichón ibérico de bellota",
+			"producto": "Salchichón ibérico de bellota",
 			"categoria": "IBÉRICOS",
 			"alergenos": [
 				"soja",
 				"lacteos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "salchichon_iberico_bellota.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 4,
@@ -90,7 +98,9 @@
 		{
 			"producto": "Solomillo ibérico de bellota",
 			"categoria": "IBÉRICOS",
-			"alergenos": [ ],
+			"alergenos": [
+				0
+			],
 			"descripcion": 0,
 			"foto": 0,
 			"tapa": 0,
@@ -105,7 +115,7 @@
 				"lacteos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "morcon_bellota.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 5,
@@ -150,7 +160,7 @@
 				"lacteos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "chorizo_iberico_bellota.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 4,
@@ -221,7 +231,7 @@
 				"lacteos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "queso_cabrales.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 7,
@@ -242,42 +252,42 @@
 			"tabla": 10
 		},
 		{
-			"producto": "Manchego p.de oveja viejo",
+			"producto": "Manchego puro de oveja viejo",
 			"categoria": "QUESOS",
 			"alergenos": [
 				"lacteos",
 				"huevos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "queso_viejo.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 5.5,
 			"tabla": 10
 		},
 		{
-			"producto": "Manchego p.de oveja ACEITE",
+			"producto": "Manchego puro de oveja en aceite",
 			"categoria": "QUESOS",
 			"alergenos": [
 				"lacteos",
 				"huevos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "queso_aceite.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 5.5,
 			"tabla": 10
 		},
 		{
-			"producto": "Manchego p.oveja curado",
+			"producto": "Manchego puro de oveja curado",
 			"categoria": "QUESOS",
 			"alergenos": [
 				"lacteos",
 				"huevos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "queso_curado.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 5.5,
@@ -298,7 +308,7 @@
 			"tabla": 10
 		},
 		{
-			"producto": "Manchego p. oveja semi",
+			"producto": "Manchego puro oveja semi",
 			"categoria": "QUESOS",
 			"alergenos": [
 				"lacteos",
@@ -333,7 +343,7 @@
 				"huevos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "queso_oveja_trufa_melanosporum.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 13.5,
@@ -361,7 +371,7 @@
 				"huevos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "queso_chili.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 5.5,
@@ -417,7 +427,7 @@
 				"huevos"
 			],
 			"descripcion": "5 quesos",
-			"foto": 0,
+			"foto": "surtido_quesos.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 8,
@@ -443,7 +453,7 @@
 				"pescado"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "huevas_maruca.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 9,
@@ -456,7 +466,7 @@
 				"pescado"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "huevas_atun.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 9,
@@ -469,7 +479,7 @@
 				"pescado"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "mojama.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 9.5,
@@ -478,9 +488,11 @@
 		{
 			"producto": "Cecina de león (ternera)",
 			"categoria": "CECINAS",
-			"alergenos": [ ],
+			"alergenos": [
+				0
+			],
 			"descripcion": 0,
-			"foto": "cecina_ternera.jpg",
+			"foto": 0,
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 6,
@@ -493,7 +505,7 @@
 				"sulfitos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "cecina_ciervo.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 7,
@@ -506,7 +518,7 @@
 				"sulfitos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "cecina_jabali.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 7,
@@ -541,7 +553,7 @@
 			"tabla": 8
 		},
 		{
-			"producto": "Salchichòn de ciervo",
+			"producto": "Salchichón de ciervo",
 			"categoria": "EMBUTIDOS DE CAZA",
 			"alergenos": [
 				"soja",
@@ -555,7 +567,7 @@
 			"tabla": 8
 		},
 		{
-			"producto": "chorizo de jabalí",
+			"producto": "Chorizo de jabalí",
 			"categoria": "EMBUTIDOS DE CAZA",
 			"alergenos": [
 				"sulfitos",
@@ -570,7 +582,7 @@
 			"tabla": 8
 		},
 		{
-			"producto": "salchichòn de jabalí",
+			"producto": "Salchichón de jabalí",
 			"categoria": "EMBUTIDOS DE CAZA",
 			"alergenos": [
 				"soja",
@@ -586,7 +598,9 @@
 		{
 			"producto": "Solomillo de orza",
 			"categoria": "IBÉRICOS DE ORZA",
-			"alergenos": [ ],
+			"alergenos": [
+				0
+			],
 			"descripcion": 0,
 			"foto": 0,
 			"tapa": 0,
@@ -597,7 +611,9 @@
 		{
 			"producto": "Lomo de orza",
 			"categoria": "IBÉRICOS DE ORZA",
-			"alergenos": [ ],
+			"alergenos": [
+				0
+			],
 			"descripcion": 0,
 			"foto": 0,
 			"tapa": 0,
@@ -608,7 +624,9 @@
 		{
 			"producto": "Presa de orza",
 			"categoria": "IBÉRICOS DE ORZA",
-			"alergenos": [ ],
+			"alergenos": [
+				0
+			],
 			"descripcion": 0,
 			"foto": 0,
 			"tapa": 0,
@@ -632,9 +650,11 @@
 		{
 			"producto": "Secreto de ciervo",
 			"categoria": "SUGERENCIAS",
-			"alergenos": [ ],
+			"alergenos": [
+				0
+			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "secreto_ciervo.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 0,
@@ -647,7 +667,7 @@
 				"pescado"
 			],
 			"descripcion": "dos raciones",
-			"foto": 0,
+			"foto": "pisto_manchego_bonito.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 0,
@@ -660,7 +680,7 @@
 				"moluscos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "mab_cambados.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 0,
@@ -673,7 +693,7 @@
 				"moluscos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "mab_cambados.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 0,
@@ -686,7 +706,7 @@
 				"moluscos"
 			],
 			"descripcion": 0,
-			"foto": 0,
+			"foto": "mab_cambados.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 0,
@@ -701,7 +721,7 @@
 				"pescado"
 			],
 			"descripcion": "Cogollos de tudela, anchoas, tomate cherry, bonito, queso cabra payoyo, esparragos de navarra y redución de módena.",
-			"foto": 0,
+			"foto": "ensalada_ha.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 0,
@@ -710,9 +730,11 @@
 		{
 			"producto": "Ensalada de perdiz",
 			"categoria": "SUGERENCIAS",
-			"alergenos": [ ],
+			"alergenos": [
+				0
+			],
 			"descripcion": "Perdiz dehuesada, tomate de ensalada, sal de escamas, y aceite de oliva extra ",
-			"foto": 0,
+			"foto": "ensalada_perdiz.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 0,
@@ -725,7 +747,7 @@
 				"pescado"
 			],
 			"descripcion": "Ventresca, tomate de ensalada y aceite extra",
-			"foto": 0,
+			"foto": "ensalada_ventresca.jpg",
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 0,

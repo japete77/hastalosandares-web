@@ -7,6 +7,8 @@ import { Data } from 'src/services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DecimalPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { HaMalagaComponent } from './ha-malaga/ha-malaga.component';
 
 export function initializeApp(data: Data) {
   return () => data.load();
@@ -14,7 +16,9 @@ export function initializeApp(data: Data) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    HaMalagaComponent
   ],
   imports: [
     BrowserModule,

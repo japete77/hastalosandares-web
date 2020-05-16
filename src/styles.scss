@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul, span, li, img, inpot, button { margin: 0; padd
 
 h1, h2, h3, h4, h5, h6 { line-height: 1.5; font-weight: inherit; }
 
-h1, h2, h3, .font-beyond { font-family: 'Old English Text MT V2', sans-serif; }
+h1, h2, h3, h4, .font-beyond { font-family: 'Old English Text MT V2', sans-serif; }
 
 p { line-height: 1.7; font-size: 1.2em; font-weight: 400; color: #555; }
 
@@ -412,7 +412,7 @@ section {
 .heading {
         position: relative;
         text-align: center;
-        margin-bottom: 70px;
+        margin-bottom: 40px;
 }
 
 .heading-img {
@@ -476,57 +476,6 @@ section {
 3. COMMONS FOR PAGE DESIGN
 --------------------------------- */
 
-/*ICONS*/
-
-.icon-gradient{ display: block; height: 80px; width: 80px;  background: url(assets/images/icons.png) no-repeat; background-size: cover; background-position: 0; }
-
-.icon-gradient.icon-pizza{ background-position: 0 0; }
-.icon-gradient.icon-sea-food{ background-position: -239px 0; }
-.icon-gradient.icon-pasta{ background-position:-159px 0; }
-.icon-gradient.icon-salad{ background-position: -79px 0; }
-
-
-.icon-box{ display: block; height: 50px; width: 50px;  background: url(assets/images/icon-boxes.png) no-repeat; background-size: cover; background-position: 0; }
-
-.icon-box.icon-pizza{ background-position: 0 0; }
-.icon-box.icon-ingradient{ background-position: -49px 0; }
-.icon-box.icon-cshef{ background-position: -99px 0; }
-
-
-/*RESPONSIVE*/
-
-@media only screen and (max-width: 992px) {
-
-        .icon-gradient{  height: 70px; width: 70px;  }
-
-        .icon-gradient.icon-sea-food{ background-position: -209px 0; }
-
-        .icon-gradient.icon-pasta{ background-position: -139px 0; }
-
-        .icon-gradient.icon-salad{ background-position: -69px 0; }
-}
-
-@media only screen and (max-width:767px) {
-
-        .icon-gradient{  height: 60px; width: 60px;  }
-
-        .icon-gradient.icon-sea-food{ background-position:  -179px 0; }
-
-        .icon-gradient.icon-pasta{ background-position: -119px 0; }
-
-        .icon-gradient.icon-salad{ background-position: -59px 0; }
-}
-
-@media only screen and (max-width: 576px) {
-
-        .icon-gradient{  height: 50px; width: 50px;  }
-
-        .icon-gradient.icon-sea-food{ background-position:  -149px 0; }
-
-        .icon-gradient.icon-pasta{ background-position: -99px 0; }
-
-        .icon-gradient.icon-salad{ background-position: -49px 0; }
-}
 
 /*SWIPER*/
 
@@ -785,10 +734,6 @@ section {
 
 .bg-seller:after{ content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background: rgba(0,0,0,.70); }
 
-.bg-menu{ background: url(assets/images/menu-back-2.jpg)  no-repeat; background-size: cover; position: relative; z-index: 1; }
-
-.bg-menu:after{ content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background: rgba(255,255,255,.80); }
-
 .bg-191 { background: #191919; }
 
 .bg-primary { background: $primary !important; }
@@ -840,6 +785,7 @@ section {
 /*IMAGES*/
 
 .ïmg-200x{ height: 200px; width: 200px; }
+.ïmg-ha { height: 225px; width: 300px; cursor: pointer }
 
 
 /*RIBBONS*/
@@ -888,16 +834,6 @@ section {
 .bg-2 {   background: url(assets/images/story_bg_1.png) no-repeat center; background-size: 100%; }
 
 .bg-3 {  background: url(assets/images/story_bg_2.png) no-repeat center;  background-size: 100%; }
-
-.bg-4 {  background: url(assets/images/slider_2_1920_600.jpg) no-repeat center;  background-size: cover; }
-
-.bg-5 {  background: url(assets/images/slider_3_1920_600.jpg) no-repeat center;  background-size: cover; }
-
-.bg-6 {  background: url(assets/images/slider_4_1920_600.jpg) no-repeat center;  background-size: cover; }
-
-.bg-7 {  background: url(assets/images/slider_5_1920_600.jpg) no-repeat center;  background-size: cover; }
-
-.bg-8 {  background: url(assets/images/slider_6_1920_600.jpg) no-repeat center;  background-size: cover; }
 
 .bg-grad-layer-6:after { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; opacity: .6;
         background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, .4) 100%); }
@@ -1535,9 +1471,6 @@ ul.selecton-size li.active{ border-radius: 3px 3px 0 0; background: $primary; co
 .logo-footer { width: 60px; }
 
 footer{ background: url("assets/images/footer_1600x800.jpg") no-repeat; background-size: cover;  position: relative;  text-align: center;z-index: 1;  font-size: 1.3em; }
-
-.footer-bg-1{ background-image:  url("assets/images/footer-1.png") ; }
-.footer-bg-1:after{ display: none; }
 
 footer,
 footer p{ color: #FFFFFF; }

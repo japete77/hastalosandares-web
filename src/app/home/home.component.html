@@ -1,0 +1,178 @@
+<header>
+    <div class="container">
+        <a class="logo" href="#"></a>
+
+        <div class="right-area">
+        </div>
+
+        <a class="menu-nav-icon" data-menu="#main-menu" href="#" (click)="clickMenu()"><i class="ion-navicon"></i></a>
+
+        <ul class="main-menu font-mountainsre" [ngClass]="visibleMenu ? 'visible-menu' : ''" id="main-menu">
+            <li><a href="#ourhistory">SOBRE NOSOTROS</a></li>
+            <li><a href="#where">¿DÓNDE ENCONTRARNOS?</a></li>
+            <li><a href="#services">¿QUÉ OFRECEMOS?</a></li>
+        </ul>
+
+        <div class="clearfix"></div>
+    </div>
+</header>
+
+<section id="top" class="bg-1 h-900x main-slider pos-relative">
+    <div class="triangle-up pos-bottom"></div>
+    <div class="container h-100">
+        <div class="dplay-tbl">
+            <div class="dplay-tbl-cell center-text color-gold">
+                <img src="assets/images/logo_ha_gold_black.png" alt="Logo" class="logo">
+                <h1 class="mt-30 mb-15 main-title">...hasta los andares</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="ourhistory" class="story-area left-text center-sm-text pos-relative">
+    <div class="abs-tbl bg-2 w-20 z--1 dplay-md-none"></div>
+    <div class="abs-tbr bg-3 w-20 z--1 dplay-md-none"></div>
+    <div class="container">
+        <div class="heading">
+            <a href="#top"><img class="heading-img" src="assets/images/logo_ha_black_gold.png" alt=""></a>
+            <h2>Nuestra Historia</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-30 our-story"><b>…Hasta los Andares ®</b> es una marca relacionada con productos ibéricos
+                    de alta calidad: jamones,
+                    embutidos, cecinas, caza… Tenemos más de cien vinos, quesos, productos gourmet… Los
+                    establecimientos: tabernas,
+                    tiendas delicatessen, jamonerías… ofrecen un servicio de alta calidad que es lo que nos motiva
+                    permanentemente.
+                    Todo intenta girar en torno a la figura de Miguel de Cervantes, icono emblemático de nuestro país.
+                </p>
+                <p class="mb-30 our-story">
+                    Tenemos más de 40 años de experiencia en el sector. Empezamos en Ciudad Real con varios
+                    establecimientos de
+                    mesones - jamonerías como las tabernas flamencas «El Bulerías», y el más emblemático «La Maestranza
+                    del Jamón»
+                    durante varios años.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p class="mb-30 our-story">
+                    Luego se abrió en Tarragona la tienda de Centro Ibérico y otro mesón ibérico llamado «Calígula»,
+                    ampliando a Barcelona
+                    Centro Ibérico en el barrio de Gracia, lo más castizo de la ciudad en el centro. Volvimos a Ciudad
+                    Real,
+                    donde abrimos una taberna y una tienda delicatessen.
+                </p>
+                <p class="mb-30 our-story">
+                    Actualmente hemos ampliado nuestras fronteras y nos hemos expandido por las ciudades más importantes
+                    de España contando
+                    con tabernas en Madrid, Ciudad Real, Barcelona y Málaga y dos Centros Ibéricos, uno en Ciudad Real y
+                    otro
+                    <b>Centro Ibérico Hasta los Andares</b> en Málaga.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="where" class="story-area bg-seller color-white pos-relative">
+    <div class="pos-bottom triangle-up"></div>
+    <div class="pos-top triangle-bottom"></div>
+    <div class="container">
+        <div class="heading">
+            <a href="#top"><img class="heading-img" src="assets/images/logo_ha_gold_black.png" alt=""></a>
+            <h2>¿Dónde encontrarnos?</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 subtitle">
+                <h4>Establecimientos hasta los andares</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div *ngFor="let facility of facilities; index as i" class="col-md-6 col-lg-4">
+                <div class="center-text mb-30">
+                    <div class="ïmg-ha mlr-auto pos-relative" (click)="mouseClick(i)">
+                        <div class="container-image">
+                            <img src="assets/images/{{facility.image}}" class="image" alt="{{facility.name}}">
+                            <div *ngIf="facility.show" class="overlay">
+                                <a *ngIf="facility.googlemap" target="_blank" href="{{facility.googlemap}}"> 
+                                    <img src="assets/images/googlemaps.png" class="icon">
+                                </a>
+                                <a *ngIf="facility.whatsapp" target="_blank" href="https://wa.me/{{facility.whatsapp}}"> 
+                                    <img src="assets/images/whatsapp.png" class="icon">
+                                </a>
+                                <a *ngIf="facility.phone" href="tel:{{facility.phone}}"> 
+                                    <img src="assets/images/phone.png" class="icon">
+                                </a>
+                                <a *ngIf="facility.tripadvisor" target="_blank" href="{{facility.tripadvisor}}"> 
+                                    <img src="assets/images/tripadvisor.png" class="icon">
+                                </a>
+                                <a *ngIf="facility.onlineshop" routerLink="facility.onlineshop">
+                                    <div class="btn-tienda">Tienda Online</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="mt-20">{{facility.name}}</h5>
+                </div>
+            </div>
+        </div>
+   </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <div class="heading">
+            <a href="#top"><img class="heading-img" src="assets/images/logo_ha_black_gold.png" alt=""></a>
+            <h2>¿Qué ofrecemos?</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-30 our-story">Las tabernas <b>Hasta los Andares ®</b> ponen a tu disposición una carta de
+                    lo más variada de
+                    productos de primera calidad: jamón ibérico, cecinas, embutidos, quesos, vinos... todo un lujo para
+                    tu paladar
+                    que puedes disfrutar en nuestra terraza.
+                </p>
+                <p class="mb-30 our-story">
+                    Ven y visítanos en Barcelona, Ciudad Real, Madrid o Málaga para que puedas disfrutar de una
+                    experiencia gastronómica
+                    inolvidable en un entorno acogedor.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p class="mb-30 our-story">
+                    Nuestras tiendas <b>Centro Ibérico Hasta los Andares ®</b> ofrecen una excelente oferta gastronómica
+                    tanto si nos visitas para hacer tu compra o si quieres que te la llevemos para que puedas
+                    disfrutarla cómodamente sin salir de casa.
+                </p>
+                <p class="mb-30">
+                    Accede a nuestra tienda online de <a href="#"><b>Ciudad Real</b></a> o <a
+                        href="#"><b>Málaga</b></a> para ver nuestra carta de productos y hacer
+                    tu pedido on-line.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer id="contact" class="pb-50  pt-70 pos-relative">
+    <div class="pos-top triangle-bottom"></div>
+    <div class="container-fluid">
+        <span class="logo-footer">
+            <a href="#top"><img src="assets/images/logo_ha_gold_black.png" alt="Logo"></a>
+        </span>
+
+        <p class="color-light font-9 mt-50 mt-sm-30">
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Web
+            realizada con <i class="ion-heart" aria-hidden="true"></i> por <a href="https://colorlib.com"
+                target="_blank">Colorlib</a>
+        </p>
+    </div>
+</footer>

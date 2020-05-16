@@ -1,0 +1,191 @@
+<section id="suggestions" class="story-area bg-seller color-white pos-relative">
+    <div class="pos-bottom triangle-up"></div>
+    <div class="pos-top triangle-bottom"></div>
+    <div class="container">
+        <div class="heading">
+            <a routerLink="/"><img class="heading-img" src="assets/images/logo_ha_gold_black.png" alt=""></a>
+            <h2>Sugerencias</h2>
+        </div>
+
+        <div class="row">
+            <div *ngFor="let menuitem of getProducts('SUGERENCIAS', 'TABLA')" class="col-lg-3 col-md-4 col-sm-6">
+                <div class="center-text mb-30">
+                    <div class="ïmg-200x mlr-auto pos-relative">
+                        <h6 class="ribbon-cont">
+                            <div class="ribbon primary"></div><b>OFFER</b>
+                        </h6>
+                        <img src="assets/images/seller-2-200x200.png" alt="">
+                    </div>
+                    <h5 class="mt-20">{{menuitem.product}}</h5>
+                    <h4 class="mt-5"><b>{{menuitem.price | number:'1.2-2'}} €</b></h4>
+                    <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order
+                                Now</b></a></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="menu" class="bg-menu">
+    <div class="container">
+        <div class="heading">
+            <a routerLink="/"><img class="heading-img" src="assets/images/logo_ha_black_gold.png" alt=""></a>
+            <h2>Nuestra Carta</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="selecton brdr-b-primary mb-20">
+                    <li>
+                        <a [ngClass]="selectedCategory=='IBÉRICOS' ? 'active' : ''" href="" onclick="return false;"
+                            (click)="selectCategory('IBÉRICOS')">
+                            <b>IBÉRICOS</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='QUESOS' ? 'active' : ''" href="" onclick="return false;"
+                            (click)="selectCategory('QUESOS')">
+                            <b>QUESOS</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='AHUMADOS Y SALAZÓN' ? 'active' : ''" href=""
+                            onclick="return false;" (click)="selectCategory('AHUMADOS Y SALAZÓN')">
+                            <b>AHUMADOS Y SALAZÓN</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='CECINAS' ? 'active' : ''" href="" onclick="return false;"
+                            (click)="selectCategory('CECINAS')">
+                            <b>CECINAS</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='EMBUTIDOS DE CAZA' ? 'active' : ''" href=""
+                            onclick="return false;" (click)="selectCategory('EMBUTIDOS DE CAZA')">
+                            <b>EMBUTIDOS DE CAZA</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='IBÉRICOS DE ORZA' ? 'active' : ''" href=""
+                            onclick="return false;" (click)="selectCategory('IBÉRICOS DE ORZA')">
+                            <b>IBÉRICOS DE ORZA</b>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="selecton-size brdr-b-primary-4 mb-30">
+                            <!-- <li [ngClass]="selectedSize=='TAPA' ? 'active' : ''" (click)="selectSize('TAPA')">
+                                <img src="assets/images/tapa.png" />
+                                <a href="" onclick="return false;">
+                                    <b>TAPA</b>
+                                </a>
+                            </li>
+                            <li [ngClass]="selectedSize=='TOSTADA' ? 'active' : ''" (click)="selectSize('TOSTADA')">
+                                <img src="assets/images/tostada.png" />
+                                <a href="" onclick="return false;">
+                                    <b>TOSTADA</b>
+                                </a>
+                            </li> -->
+                            <li [ngClass]="selectedSize=='MEDIA TABLA' ? 'active' : ''" (click)="selectSize('MEDIA TABLA')">
+                                <img src="assets/images/media_tabla.png" />
+                                <a href="" onclick="return false;">
+                                    <b>&#189; TABLA</b>
+                                </a>
+                            </li>
+                            <li [ngClass]="selectedSize=='TABLA' ? 'active' : ''" (click)="selectSize('TABLA')">
+                                <img src="assets/images/tabla.png" />
+                                <a href="" onclick="return false;">
+                                    <b>TABLA</b>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div *ngFor="let menuitem of getProducts(selectedCategory, selectedSize)" class="col-md-6 food-menu pizza">
+                <div *ngIf="menuitem.price > 0" class="sided-90x mb-30">
+                    <div class="s-left"><img class="br-3" src="assets/images/products/{{menuitem.image}}" alt="Menu Image"></div>
+                    <div class="s-right">
+                        <h5 class="mb-10">
+                            <b>{{menuitem.product}}</b>
+                            <b class="color-primary float-right">{{menuitem.price | number:'1.2-2'}} €</b>
+                        </h5>
+                        <h6 class="mb-10">
+                            <span class="icon-allergens" *ngFor="let allergen of menuitem.allergens">
+                                <img src="assets/images/{{allergen}}.svg"/>
+                            </span>
+                            <b *ngIf="isProductInOrder(menuitem)" class="btn-more float-right" (click)="addOrderItem(menuitem)"><img src="assets/images/plus.svg"/></b>
+                            <b *ngIf="isProductInOrder(menuitem)" class="btn-amount float-right">{{getItemsInOrder(menuitem)}}</b>
+                            <b *ngIf="isProductInOrder(menuitem)" class="btn-less float-right" (click)="removeOrderItem(menuitem)"><img src="assets/images/minus.svg"/></b>
+                            <b *ngIf="!isProductInOrder(menuitem)" class="btn-buy float-right" (click)="addOrderItem(menuitem)">LO QUIERO</b>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="order && order.items && order.items.length > 0" class="order-container">
+            <div class="line line--header">
+                <div class="col-product col-product--total">MI PEDIDO</div>
+            </div>
+            <div *ngFor="let item of order.items" class="line">
+                <div class="col-product">{{item.product}} ({{item.size}})</div>
+                <div class="push col-amount">x{{item.amount}}</div>
+                <div class="col-price">{{item.price * item.amount | number:'1.2-2'}} €</div>
+            </div>
+            <div class="line line--total">
+                <div class="col-product col-product--total">TOTAL</div>
+                <div class="push col-price col-price--total">{{getTotal() | number:'1.2-2'}} €</div>
+            </div>
+            <br>
+            <div class="line line--address">
+                <div class="col-label-order">Nombre</div>
+                <input [(ngModel)]="order.name" (ngModelChange)="checkClientInfo()" class="col-client-info" type="text">
+            </div>
+            <div class="line line--address">
+                <div class="col-label-order">Dirección</div>
+                <input [(ngModel)]="order.address" (ngModelChange)="checkClientInfo()" class="col-client-info" type="text">
+            </div>
+            <div class="line line--address">
+                <div class="col-label-order">Código Postal</div>
+                <input [(ngModel)]="order.cp" (ngModelChange)="checkClientInfo()" class="col-client-info" type="text">
+            </div>
+        </div>
+
+        <h6 class="order-warning">{{warning}}</h6>
+
+        <h6 *ngIf="isVisibleOrderButton()" class="center-text mt-40 mt-sm-20 mb-30">
+            <a target="_blank" href="{{getWhatsAppOrderLink()}}" class="btn-primaryc plr-25">
+                <b>SOLICITAR MI PEDIDO</b>
+                <span class="icon-orders"><img src="assets/images/whatsapp.svg" /></span>
+            </a>
+        </h6>
+
+    </div>
+</section>
+
+<footer id="contact" class="pb-50  pt-70 pos-relative">
+    <div class="pos-top triangle-bottom"></div>
+    <div class="container-fluid">
+        <span class="logo-footer">
+            <a routerLink="/"><img src="assets/images/logo_ha_gold_black.png" alt="Logo"></a>
+        </span>
+
+        <p class="color-light font-9 mt-50 mt-sm-30">
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Web
+            realizada con <i class="ion-heart" aria-hidden="true"></i> por <a href="https://colorlib.com"
+                target="_blank">Colorlib</a>
+        </p>
+    </div>
+</footer>
