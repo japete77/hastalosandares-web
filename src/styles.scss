@@ -939,10 +939,47 @@ section {
 
 /* BUTTON STYLING */
 
-.btn-buy { background-color: #ecca7f; padding: 10px; border-radius: 5px; cursor: pointer; }
-.btn-more { width: 40px; margin-right: -10px; text-align: center; padding: 10px; border-radius: 5px; cursor: pointer; }
-.btn-less { width: 40px;text-align: center; padding: 10px; border-radius: 5px; cursor: pointer; }
-.btn-amount { padding: 10px; }
+.btn-buy { 
+        background-color: #ecca7f; 
+        padding: 10px; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        &--suggestions {
+                background-color: #16418f;
+                float: none !important;
+        }
+}
+.btn-more { 
+        width: 40px; 
+        margin-right: -10px; 
+        text-align: center; 
+        padding: 10px; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        &--suggestions {
+                color: white;
+                float: none !important;
+        }
+}
+.btn-less { 
+        width: 40px;
+        text-align: center; 
+        padding: 10px; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        &--suggestions {
+                color: white;
+                float: none !important;
+        }
+}
+.btn-amount { 
+        padding: 10px; 
+        &--suggestions {
+                color: white;
+                float: none !important;
+                margin-left: 10px;
+        }
+}
 
 .btn-brdr-primary { text-align: center; height: 45px; line-height: 43px; border: 1px solid $primary; color: $primary; border-radius: 2px; }
 
@@ -7381,4 +7418,8 @@ ul.icon li a{ padding: 10px;  }
 
 .logo {
     width: 15%;
+}
+
+.img-20 {
+        width: 20px;
 }

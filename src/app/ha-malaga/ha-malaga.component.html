@@ -1,31 +1,3 @@
-<section id="suggestions" class="story-area bg-seller color-white pos-relative">
-    <div class="pos-bottom triangle-up"></div>
-    <div class="pos-top triangle-bottom"></div>
-    <div class="container">
-        <div class="heading">
-            <a routerLink="/"><img class="heading-img" src="assets/images/logo_ha_gold_black.png" alt=""></a>
-            <h2>Sugerencias</h2>
-        </div>
-
-        <div class="row">
-            <div *ngFor="let menuitem of getProducts('SUGERENCIAS', 'TABLA')" class="col-lg-3 col-md-4 col-sm-6">
-                <div class="center-text mb-30">
-                    <div class="ïmg-200x mlr-auto pos-relative">
-                        <h6 class="ribbon-cont">
-                            <div class="ribbon primary"></div><b>OFFER</b>
-                        </h6>
-                        <img src="assets/images/seller-2-200x200.png" alt="">
-                    </div>
-                    <h5 class="mt-20">{{menuitem.product}}</h5>
-                    <h4 class="mt-5"><b>{{menuitem.price | number:'1.2-2'}} €</b></h4>
-                    <h6 class="mt-20"><a href="#" class="btn-brdr-primary plr-25"><b>Order
-                                Now</b></a></h6>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="menu" class="bg-menu">
     <div class="container">
         <div class="heading">
@@ -114,7 +86,7 @@
         <div class="row">
             <div *ngFor="let menuitem of getProducts(selectedCategory, selectedSize)" class="col-md-6 food-menu pizza">
                 <div *ngIf="menuitem.price > 0" class="sided-90x mb-30">
-                    <div class="s-left"><img class="br-3" src="assets/images/products/{{menuitem.image}}" alt="Menu Image"></div>
+                    <div class="s-left"><img *ngIf="menuitem.image && menuitem.image != '0'" class="br-3" src="assets/images/products/{{menuitem.image}}" alt="Menu Image"></div>
                     <div class="s-right">
                         <h5 class="mb-10">
                             <b>{{menuitem.product}}</b>
@@ -174,9 +146,49 @@
     </div>
 </section>
 
-<footer id="contact" class="pb-50  pt-70 pos-relative">
+<section id="suggestions" class="story-area bg-seller color-white pos-relative">
+    <div class="pos-bottom triangle-up"></div>
     <div class="pos-top triangle-bottom"></div>
-    <div class="container-fluid">
+    <div class="container">
+        <div class="heading">
+            <a routerLink="/"><img class="heading-img" src="assets/images/logo_ha_gold_black.png" alt=""></a>
+            <h2>Sugerencias</h2>
+        </div>
+
+        <div class="row">
+            <div *ngFor="let menuitem of getProducts('SUGERENCIAS', 'TABLA')" class="col-lg-3 col-md-4 col-sm-6">
+                <div class="center-text mb-50">
+                    <div *ngIf="menuitem.image && menuitem.image != 0" class="ïmg-200x mlr-auto pos-relative">
+                        <img class="img-suggestions" src="assets/images/products/{{menuitem.image}}" alt="">
+                    </div>
+                    <h5 class="mt-20 product-title">{{menuitem.product}}</h5>
+                    <h4 class="mt-5"><b>{{menuitem.price | number:'1.2-2'}} €</b></h4>
+                    <h6 class="mt-20">
+                        <b *ngIf="isProductInOrder(menuitem)" class="btn-more btn-more--suggestions float-right" (click)="addOrderItem(menuitem)"><img class="img-20" src="assets/images/plus_light.svg"/></b>
+                        <b *ngIf="isProductInOrder(menuitem)" class="btn-amount btn-amount--suggestions float-right">{{getItemsInOrder(menuitem)}}</b>
+                        <b *ngIf="isProductInOrder(menuitem)" class="btn-less btn-less--suggestions float-right" (click)="removeOrderItem(menuitem)"><img class="img-20" src="assets/images/minus_light.svg"/></b>
+                        <b *ngIf="!isProductInOrder(menuitem)" class="btn-buy btn-buy--suggestions float-right" (click)="addOrderItem(menuitem)">LO QUIERO</b>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="footer" class="pb-50 pt-70 pos-relative">
+    <div class="container">
+        <div class="heading">
+            <a routerLink="/"><img class="heading-img" src="assets/images/logo_ha_gold_black.png" alt=""></a>
+        </div>
+        <p class="font-9 mt-50 mt-sm-30 center-text">
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Web
+            realizada con <i class="ion-heart" aria-hidden="true"></i> por <a href="https://colorlib.com"
+                target="_blank">Colorlib</a>
+        </p>
+    </div>
+    <!-- <div class="pos-top triangle-bottom"></div> -->
+    <!-- <div class="container-fluid">
         <span class="logo-footer">
             <a routerLink="/"><img src="assets/images/logo_ha_gold_black.png" alt="Logo"></a>
         </span>
@@ -187,5 +199,5 @@
             realizada con <i class="ion-heart" aria-hidden="true"></i> por <a href="https://colorlib.com"
                 target="_blank">Colorlib</a>
         </p>
-    </div>
-</footer>
+    </div> -->
+</section>
