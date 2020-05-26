@@ -951,7 +951,7 @@ section {
 }
 .btn-more { 
         width: 40px; 
-        margin-right: -10px; 
+        margin-right: 0; 
         text-align: center; 
         padding: 10px; 
         border-radius: 5px; 
@@ -7414,6 +7414,7 @@ ul.icon li a{ padding: 10px;  }
 .order-warning {
         color: red;
         text-align: center;
+        margin: 30px 0 0 0;
 }
 
 .logo {

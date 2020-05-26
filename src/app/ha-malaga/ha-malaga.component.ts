@@ -12,13 +12,17 @@ import { MenuItem } from 'src/models/menu-item';
 })
 export class HaMalagaComponent {
   title = 'Hasta Los Andares'
-  mobile = '601028742'
+  mobile = '667415298'
+  phone = '951624274'
   cart: Cart
   selectedCategory: string = 'IBÉRICOS'
   selectedSize: string = 'TABLA'
   order: OrderMenu = new OrderMenu()
   warning: string;
-  validCP = [ '29001', '29002' ];
+  validCP = [ '29007', '29016', '29002', '29005', '29008', '29003', '29009', '29012', '29015' ];
+
+  gastos_envio = 5
+  limite_gastos = 50
 
   constructor() {
     this.cart = Data.cart
@@ -40,6 +44,7 @@ export class HaMalagaComponent {
       return {
         product: item.producto,
         price: this.getPriceBySize(item, this.selectedSize),
+        categoria: item.categoria,
         size: this.selectedSize,
         description: item.descripcion,
         image: item.foto,
@@ -57,6 +62,7 @@ export class HaMalagaComponent {
 
   selectCategory(category: string) {
     this.selectedCategory = category
+    if (this.selectedCategory == 'VINOS') this.selectedSize = 'TABLA'
   }
 
   selectSize(size: string) {
@@ -74,6 +80,7 @@ export class HaMalagaComponent {
       this.order.items.push({
         allergens: item.allergens,
         amount: 1,
+        categoria: item.categoria,
         description: item.description,
         image: item.image,
         price: item.price,
@@ -126,7 +133,7 @@ export class HaMalagaComponent {
   getOrderItems() {
     var result = '';
     for (var i = 0; i < this.order.items.length; i++) {
-      result += `${this.order.items[i].product} (${this.order.items[i].size}) ${this.order.items[i].price} €
+      result += `${this.order.items[i].product} (${this.order.items[i].categoria == 'VINOS' ? 'BOTELLA' : this.order.items[i].size}) x${this.order.items[i].amount} ... ${this.order.items[i].price * this.order.items[i].amount} €
 `
     }
     return result;
@@ -135,7 +142,9 @@ export class HaMalagaComponent {
   getWhatsAppOrderLink() {
     var order = `PEDIDO:
 ${this.getOrderItems()}
-TOTAL: ${this.getTotal()} €
+GASTOS DE ENVÍO: ${this.getTotal() < this.limite_gastos ? this.gastos_envio : 0} €
+
+TOTAL: ${this.getTotal() < this.limite_gastos ? this.getTotal() + this.gastos_envio : this.getTotal()} €
 
 ENVIAR A:
 ${this.order.name}

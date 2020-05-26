@@ -44,11 +44,17 @@
                             <b>IBÉRICOS DE ORZA</b>
                         </a>
                     </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='VINOS' ? 'active' : ''" href=""
+                            onclick="return false;" (click)="selectCategory('VINOS')">
+                            <b>VINOS</b>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <div class="row">
+        <div *ngIf="selectedCategory != 'VINOS'" class="row">
             <div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-12">
@@ -89,16 +95,18 @@
                     <div class="s-left"><img *ngIf="menuitem.image && menuitem.image != '0'" class="br-3" src="assets/images/products/{{menuitem.image}}" alt="Menu Image"></div>
                     <div class="s-right">
                         <h5 class="mb-10">
-                            <b>{{menuitem.product}}</b>
+                            <div class="title">
+                                <b>{{menuitem.product}}</b>
+                            </div>
                             <b class="color-primary float-right">{{menuitem.price | number:'1.2-2'}} €</b>
                         </h5>
                         <h6 class="mb-10">
                             <span class="icon-allergens" *ngFor="let allergen of menuitem.allergens">
                                 <img src="assets/images/{{allergen}}.svg"/>
                             </span>
-                            <b *ngIf="isProductInOrder(menuitem)" class="btn-more float-right" (click)="addOrderItem(menuitem)"><img src="assets/images/plus.svg"/></b>
-                            <b *ngIf="isProductInOrder(menuitem)" class="btn-amount float-right">{{getItemsInOrder(menuitem)}}</b>
                             <b *ngIf="isProductInOrder(menuitem)" class="btn-less float-right" (click)="removeOrderItem(menuitem)"><img src="assets/images/minus.svg"/></b>
+                            <b *ngIf="isProductInOrder(menuitem)" class="btn-amount float-right">{{getItemsInOrder(menuitem)}}</b>
+                            <b *ngIf="isProductInOrder(menuitem)" class="btn-more float-right" (click)="addOrderItem(menuitem)"><img src="assets/images/plus.svg"/></b>
                             <b *ngIf="!isProductInOrder(menuitem)" class="btn-buy float-right" (click)="addOrderItem(menuitem)">LO QUIERO</b>
                         </h6>
                     </div>
@@ -111,13 +119,17 @@
                 <div class="col-product col-product--total">MI PEDIDO</div>
             </div>
             <div *ngFor="let item of order.items" class="line">
-                <div class="col-product">{{item.product}} ({{item.size}})</div>
+                <div class="col-product">{{item.product}} ({{item.categoria == 'VINOS' ? 'BOTELLA' : item.size}})</div>
                 <div class="push col-amount">x{{item.amount}}</div>
                 <div class="col-price">{{item.price * item.amount | number:'1.2-2'}} €</div>
             </div>
             <div class="line line--total">
+                <div class="col-product col-product--total">Gastos de envío *</div>
+                <div class="push col-price col-price--total">{{(getTotal() < limite_gastos ? gastos_envio : 0) | number:'1.2-2'}} €</div>
+            </div>
+            <div class="line line--total">
                 <div class="col-product col-product--total">TOTAL</div>
-                <div class="push col-price col-price--total">{{getTotal() | number:'1.2-2'}} €</div>
+                <div class="push col-price col-price--total">{{(getTotal() < limite_gastos ? getTotal() + gastos_envio : getTotal()) | number:'1.2-2'}} €</div>
             </div>
             <br>
             <div class="line line--address">
@@ -135,12 +147,27 @@
         </div>
 
         <h6 class="order-warning">{{warning}}</h6>
-
+        <h6 *ngIf="order && order.items && order.items.length > 0" class="center-text mt-40 mt-sm-20 mb-30">
+            <div>
+                * Para pedidos igual o superior a {{limite_gastos}} € el envío es gratuito.
+            </div>
+        </h6>
         <h6 *ngIf="isVisibleOrderButton()" class="center-text mt-40 mt-sm-20 mb-30">
-            <a target="_blank" href="{{getWhatsAppOrderLink()}}" class="btn-primaryc plr-25">
-                <b>SOLICITAR MI PEDIDO</b>
-                <span class="icon-orders"><img src="assets/images/whatsapp.svg" /></span>
-            </a>
+            <div>
+                Puede solicitar su pedido a través de Whatsapp. Una vez recibido se le enviará un enlace a la pasarela se pago <b>Comercio Seguro de CaixaBank</b> a través de la cual podrá proceder al pago para que su pedido le sea enviado. 
+            </div>
+            <div>
+                <div class="container-image">
+                    <div class="overlay">
+                        <a target="_blank" href="{{getWhatsAppOrderLink()}}"> 
+                            <img src="assets/images/whatsapp.png" class="icon">
+                        </a>
+                        <!-- <a href="tel:{{phone}}"> 
+                            <img src="assets/images/phone.png" class="icon">
+                        </a> -->
+                    </div>
+                </div>
+            </div>
         </h6>
 
     </div>
@@ -187,17 +214,4 @@
                 target="_blank">Colorlib</a>
         </p>
     </div>
-    <!-- <div class="pos-top triangle-bottom"></div> -->
-    <!-- <div class="container-fluid">
-        <span class="logo-footer">
-            <a routerLink="/"><img src="assets/images/logo_ha_gold_black.png" alt="Logo"></a>
-        </span>
-
-        <p class="color-light font-9 mt-50 mt-sm-30">
-            Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Web
-            realizada con <i class="ion-heart" aria-hidden="true"></i> por <a href="https://colorlib.com"
-                target="_blank">Colorlib</a>
-        </p>
-    </div> -->
 </section>
