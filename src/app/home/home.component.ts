@@ -41,8 +41,8 @@ export class HomeComponent {
       name: 'Taberna Barcelona',
       image: 'ha-barcelona.jpg',
       googlemap: 'https://g.page/hastalosandaresbarcelona',
-      whatsapp: '34673803476',
-      phone: '673803476',
+      whatsapp: '34673358322',
+      phone: '936015517',
       onlineshop: null, 
       tripadvisor: 'https://www.tripadvisor.es/Restaurant_Review-g187497-d17412589-Reviews-Hasta_los_Andares_Barcelona-Barcelona_Catalonia.html',
       show: false

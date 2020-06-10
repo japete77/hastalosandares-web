@@ -9,16 +9,18 @@ import { DecimalPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HaMalagaComponent } from './ha-malaga/ha-malaga.component';
+import { TabernaMalagaComponent } from './taberna-malaga/taberna-malaga.component';
 
 export function initializeApp(data: Data) {
-  return () => data.load();
+  return () => data.load('cart');
 }
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HaMalagaComponent
+    HaMalagaComponent,
+    TabernaMalagaComponent
   ],
   imports: [
     BrowserModule,

@@ -4,19 +4,18 @@ import { Cart } from 'src/models/cart';
 
 @Injectable()
 export class Data {
-    static cart: Cart;
-
     constructor(private http: HttpClient) {}
     
-    load() {
-        const jsonFile = `assets/data/cart.json`;
-        return new Promise<void>((resolve, reject) => {
-            this.http.get(jsonFile).toPromise().then((response : Cart) => {
-                Data.cart = <Cart>response;
-                resolve();
-            }).catch((response: any) => {
-                reject(`Could not load file '${jsonFile}': ${JSON.stringify(response)}`);
+    load(name: string) : Promise<Cart> {
+        if (name) {
+            const jsonFile = `assets/data/${name}.json`;
+            return new Promise<Cart>((resolve, reject) => {
+                this.http.get(jsonFile).toPromise().then((response : Cart) => {
+                    resolve(<Cart>response);
+                }).catch((response: any) => {
+                    reject(`Could not load file '${jsonFile}': ${JSON.stringify(response)}`);
+                });
             });
-        });
+        }
     }
 }

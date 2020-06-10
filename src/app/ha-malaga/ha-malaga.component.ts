@@ -20,16 +20,23 @@ export class HaMalagaComponent {
   order: OrderMenu = new OrderMenu()
   warning: string;
   validCP = [ '29007', '29016', '29002', '29005', '29008', '29003', '29009', '29012', '29015' ];
+  loading = true;
 
   gastos_envio = 5
   limite_gastos = 50
 
-  constructor() {
-    this.cart = Data.cart
+  constructor(private dataService: Data) {
+    this.loading = true
+    dataService.load('cart').then(result => {
+      this.cart = result
+      this.loading = false;
+    });
     this.checkClientInfo()
   }
 
   getProducts(category: string, size: string) {
+    if (!this.cart) return;
+    
     var filtered : Array<MenuItem>;
     if (size == 'TAPA') 
       filtered = this.cart.menu.filter(f => f.categoria == category && f.tapa > 0).sort()
@@ -43,9 +50,9 @@ export class HaMalagaComponent {
     return filtered.map(item => {
       return {
         product: item.producto,
-        price: this.getPriceBySize(item, this.selectedSize),
+        price: this.getPriceBySize(item, size),
         categoria: item.categoria,
-        size: this.selectedSize,
+        size: size,
         description: item.descripcion,
         image: item.foto,
         allergens: item.alergenos
