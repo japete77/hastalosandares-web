@@ -144,18 +144,30 @@
                 <div class="col-label-order">Código Postal</div>
                 <input [(ngModel)]="order.cp" (ngModelChange)="checkClientInfo()" class="col-client-info" type="text">
             </div>
+            <div class="line line--address">
+                <div class="col-label-order">Forma de pago</div>
+                <select name="pay" id="pay" [(ngModel)]="order.pay" (ngModelChange)="checkClientInfo()" value="Metálico"  class="col-client-info">
+                    <option value="Metálico">Metálico</option>
+                    <option value="Tarjeta">Tarjeta</option>
+                </select>
+            </div>
         </div>
 
         <h6 class="order-warning">{{warning}}</h6>
         <h6 *ngIf="order && order.items && order.items.length > 0" class="center-text mt-40 mt-sm-20 mb-30">
-            <div>
-                * Para pedidos igual o superior a {{limite_gastos}} € el envío es gratuito.
-            </div>
+            <div>* Para pedidos igual o superior a {{limite_gastos}} € el envío es gratuito.</div>
+            &nbsp;
+            <div>Los pedidos solo serán atentidos en el siguiente horario:</div>
+            <div>Lunes de 10:00 a 15:30 y 17:30 a 22:00</div>
+            <div>Martes de 10:00 a 14:00 y 17:30 a 20:30</div>
+            <div>Miércoles de 10:00 a 14:00 y 17:30 a 22:00</div>
+            <div>Jueves, Viernes, Sábado y Domingo de 10:00 a 22:00</div>
         </h6>
         <h6 *ngIf="isVisibleOrderButton()" class="center-text mt-40 mt-sm-20 mb-30">
             <div>
-                Puede solicitar su pedido a través de Whatsapp. Una vez recibido se le enviará un enlace a la pasarela se pago <b>Comercio Seguro de CaixaBank</b> a través de la cual podrá proceder al pago para que su pedido le sea enviado. 
+                Haz clic en el icono para enviar tu pedido por Whatsapp:
             </div>
+
             <div>
                 <div class="container-image">
                     <div class="overlay">

@@ -153,6 +153,8 @@ GASTOS DE ENVÍO: ${this.getTotal() < this.limite_gastos ? this.gastos_envio : 0
 
 TOTAL: ${this.getTotal() < this.limite_gastos ? this.getTotal() + this.gastos_envio : this.getTotal()} €
 
+FORMA DE PAGO: ${this.order.pay}
+
 ENVIAR A:
 ${this.order.name}
 ${this.order.address}
@@ -173,7 +175,7 @@ ${this.order.cp}
 
   checkClientInfo() {
     if (!this.order || !this.order.items || this.order.items.length == 0) this.warning = "";
-    else if (!this.order.name || !this.order.address || !this.order.cp) {
+    else if (!this.order.name || !this.order.address || !this.order.cp || !this.order.pay) {
           this.warning = "Rellene su datos para solicitar el pedido"
     } else if (!this.isValidCP()) {
       this.warning = "Lo siento, no servimos a domicilio en ese código postal";
