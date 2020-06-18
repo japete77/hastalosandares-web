@@ -110,13 +110,13 @@
                                 <a *ngIf="facility.tripadvisor" target="_blank" href="{{facility.tripadvisor}}"> 
                                     <img src="assets/images/tripadvisor.png" class="icon">
                                 </a>
-                                <a *ngIf="facility.onlineshop" routerLink="{{facility.onlineshop}}">
-                                    <div class="btn-tienda">Tienda Online</div>
-                                </a>
                             </div>
                         </div>
                     </div>
                     <h5 class="mt-20">{{facility.name}}</h5>
+                    <a *ngIf="facility.onlineshop" routerLink="{{facility.onlineshop}}">
+                        <div class="btn-tienda">SERVIMOS A DOMICILIO</div>
+                    </a>
                 </div>
             </div>
         </div>
