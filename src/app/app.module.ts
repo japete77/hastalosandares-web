@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HaMalagaComponent } from './ha-malaga/ha-malaga.component';
 import { TabernaMalagaComponent } from './taberna-malaga/taberna-malaga.component';
+import { TabernaMalagaEnComponent } from './taberna-malaga-en/taberna-malaga-en.component';
 
 export function initializeApp(data: Data) {
   return () => data.load('cart');
@@ -20,7 +21,8 @@ export function initializeApp(data: Data) {
     AppComponent,
     HomeComponent,
     HaMalagaComponent,
-    TabernaMalagaComponent
+    TabernaMalagaComponent,
+    TabernaMalagaEnComponent
   ],
   imports: [
     BrowserModule,

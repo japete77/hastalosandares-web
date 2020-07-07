@@ -1,0 +1,173 @@
+<section id="menu" class="bg-menu">
+    <div class="container">
+        <div class="heading">
+            <a routerLink="/"><img class="heading-img" src="assets/images/logo_ha_black_gold.png" alt=""></a>
+            <h2>Our Menu</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="selecton brdr-b-primary mb-20">
+                    <li>
+                        <a [ngClass]="selectedCategory=='IBÉRICOS' ? 'active' : ''" href="" onclick="return false;"
+                            (click)="selectCategory('IBÉRICOS')">
+                            <b>IBERIAN</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='QUESOS' ? 'active' : ''" href="" onclick="return false;"
+                            (click)="selectCategory('QUESOS')">
+                            <b>CHEESES</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='AHUMADOS Y SALAZÓN' ? 'active' : ''" href=""
+                            onclick="return false;" (click)="selectCategory('AHUMADOS Y SALAZÓN')">
+                            <b>SMOKED & SALTING</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='CECINAS' ? 'active' : ''" href="" onclick="return false;"
+                            (click)="selectCategory('CECINAS')">
+                            <b>CURED MEAT</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='EMBUTIDOS DE CAZA' ? 'active' : ''" href=""
+                            onclick="return false;" (click)="selectCategory('EMBUTIDOS DE CAZA')">
+                            <b>HUNTING SAUSAGES</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='IBÉRICOS DE ORZA' ? 'active' : ''" href=""
+                            onclick="return false;" (click)="selectCategory('IBÉRICOS DE ORZA')">
+                            <b>ORZA IBERIAN</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='VINOS' ? 'active' : ''" href=""
+                            onclick="return false;" (click)="selectCategory('VINOS')">
+                            <b>WINES</b>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div *ngIf="selectedCategory != 'VINOS'" class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="selecton-size brdr-b-primary-4 mb-30">
+                            <li [ngClass]="selectedSize=='TAPA' ? 'active' : ''" (click)="selectSize('TAPA')">
+                                <img src="assets/images/tapa.png" />
+                                <a href="" onclick="return false;">
+                                    <b>TAPA</b>
+                                </a>
+                            </li>
+                            <li [ngClass]="selectedSize=='TOSTADA' ? 'active' : ''" (click)="selectSize('TOSTADA')">
+                                <img src="assets/images/tostada.png" />
+                                <a href="" onclick="return false;">
+                                    <b>TOAST</b>
+                                </a>
+                            </li>
+                            <li [ngClass]="selectedSize=='MEDIA TABLA' ? 'active' : ''" (click)="selectSize('MEDIA TABLA')">
+                                <img src="assets/images/media_tabla.png" />
+                                <a href="" onclick="return false;">
+                                    <b>&#189; TABLE</b>
+                                </a>
+                            </li>
+                            <li [ngClass]="selectedSize=='TABLA' ? 'active' : ''" (click)="selectSize('TABLA')">
+                                <img src="assets/images/tabla.png" />
+                                <a href="" onclick="return false;">
+                                    <b>TABLE</b>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="selectedCategory == 'VINOS'" class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="selecton-size brdr-b-primary-4 mb-30">
+                            <li [ngClass]="selectedSize=='MEDIA TABLA' ? 'active' : ''" (click)="selectSize('MEDIA TABLA')">
+                                <img src="assets/images/copa.png" />
+                                <a href="" onclick="return false;">
+                                    <b>GLASS</b>
+                                </a>
+                            </li>
+                            <li [ngClass]="selectedSize=='TABLA' ? 'active' : ''" (click)="selectSize('TABLA')">
+                                <img src="assets/images/botella.png" />
+                                <a href="" onclick="return false;">
+                                    <b>BOTTLE</b>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div *ngFor="let menuitem of getProducts(selectedCategory, selectedSize)" class="col-md-6 food-menu pizza">
+                <div *ngIf="menuitem.price > 0" class="sided-90x mb-30">
+                    <div class="s-left"><img *ngIf="menuitem.image && menuitem.image != '0'" class="br-3" src="assets/images/products/{{menuitem.image}}" alt="Menu Image"></div>
+                    <div class="s-right">
+                        <h5 class="mb-10">
+                            <div class="title">
+                                <b>{{menuitem.product}}</b>
+                            </div>
+                            <b class="color-primary float-right">{{menuitem.price | number:'1.2-2'}} €</b>
+                        </h5>
+                        <h6 class="mb-10">
+                            <span class="icon-allergens" *ngFor="let allergen of menuitem.allergens">
+                                <img src="assets/images/{{allergen}}.svg"/>
+                            </span>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="suggestions" class="story-area bg-seller color-white pos-relative">
+    <div class="pos-bottom triangle-up"></div>
+    <div class="pos-top triangle-bottom"></div>
+    <div class="container">
+        <div class="heading">
+            <a routerLink="/"><img class="heading-img" src="assets/images/logo_ha_gold_black.png" alt=""></a>
+            <h2>Our Suggestions</h2>
+        </div>
+
+        <div class="row">
+            <div *ngFor="let menuitem of getProducts('SUGERENCIAS', 'TABLA')" class="col-lg-3 col-md-4 col-sm-6">
+                <div class="center-text mb-50">
+                    <div *ngIf="menuitem.image && menuitem.image != 0" class="ïmg-200x mlr-auto pos-relative">
+                        <img class="img-suggestions" src="assets/images/products/{{menuitem.image}}" alt="">
+                    </div>
+                    <h5 class="mt-20 product-title">{{menuitem.product}}</h5>
+                    <h4 class="mt-5"><b>{{menuitem.price | number:'1.2-2'}} €</b></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="footer" class="pb-50 pt-70 pos-relative">
+    <div class="container">
+        <div class="heading">
+            <a routerLink="/"><img class="heading-img" src="assets/images/logo_ha_gold_black.png" alt=""></a>
+        </div>
+        <p class="font-9 mt-50 mt-sm-30 center-text">
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved | Web
+            made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                target="_blank">Colorlib</a>
+        </p>
+    </div>
+</section>

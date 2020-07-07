@@ -3,13 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HaMalagaComponent } from './ha-malaga/ha-malaga.component';
 import { TabernaMalagaComponent } from './taberna-malaga/taberna-malaga.component';
+import { TabernaMalagaEnComponent } from './taberna-malaga-en/taberna-malaga-en.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'ha-malaga', component: HaMalagaComponent },
   { path: 'tienda-malaga', component: HaMalagaComponent },
-  { path: 'taberna-malaga', component: TabernaMalagaComponent }
+  { path: 'taberna-malaga', component: TabernaMalagaComponent },
+  { path: 'taberna-malaga-en', component: TabernaMalagaEnComponent }
 ];
 
 @NgModule({
