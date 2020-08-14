@@ -217,7 +217,7 @@
 			"tabla": 12
 		},
 		{
-			"producto": " Cabrales blue cheese",
+			"producto": "Cabrales blue cheese",
 			"categoria": "QUESOS",
 			"alergenos": [
 				"lacteos"
@@ -1110,7 +1110,7 @@
 			"foto": "vino_generico.jpg",
 			"tapa": 0,
 			"tostada": 0,
-			"media_tabla": 4,
+			"media_tabla": 4.5,
 			"tabla": 25
 		},
 		{
@@ -1308,8 +1308,8 @@
 			"foto": "vino_generico.jpg",
 			"tapa": 0,
 			"tostada": 0,
-			"media_tabla": 2.5,
-			"tabla": 15
+			"media_tabla": 3,
+			"tabla": 17
 		},
 		{
 			"producto": "Cuatro pasos (BIERZO)",
@@ -1419,7 +1419,7 @@
 			"tapa": 0,
 			"tostada": 0,
 			"media_tabla": 9,
-			"tabla": 48
+			"tabla": 49
 		},
 		{
 			"producto": "Marqués de Griñón Emeritus (VINOS DE PAGO)",

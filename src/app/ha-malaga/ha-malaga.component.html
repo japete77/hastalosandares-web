@@ -45,8 +45,8 @@
                         </a>
                     </li>
                     <li>
-                        <a [ngClass]="selectedCategory=='VINOS' ? 'active' : ''" href=""
-                            onclick="return false;" (click)="selectCategory('VINOS')">
+                        <a [ngClass]="selectedCategory=='VINOS' ? 'active' : ''" href="" onclick="return false;"
+                            (click)="selectCategory('VINOS')">
                             <b>VINOS</b>
                         </a>
                     </li>
@@ -71,7 +71,8 @@
                                     <b>TOSTADA</b>
                                 </a>
                             </li> -->
-                            <li [ngClass]="selectedSize=='MEDIA TABLA' ? 'active' : ''" (click)="selectSize('MEDIA TABLA')">
+                            <li [ngClass]="selectedSize=='MEDIA TABLA' ? 'active' : ''"
+                                (click)="selectSize('MEDIA TABLA')">
                                 <img src="assets/images/media_tabla.png" />
                                 <a href="" onclick="return false;">
                                     <b>&#189; TABLA</b>
@@ -92,7 +93,8 @@
         <div class="row">
             <div *ngFor="let menuitem of getProducts(selectedCategory, selectedSize)" class="col-md-6 food-menu pizza">
                 <div *ngIf="menuitem.price > 0" class="sided-90x mb-30">
-                    <div class="s-left"><img *ngIf="menuitem.image && menuitem.image != '0'" class="br-3" src="assets/images/products/{{menuitem.image}}" alt="Menu Image"></div>
+                    <div class="s-left"><img *ngIf="menuitem.image && menuitem.image != '0'" class="br-3"
+                            src="assets/images/products/{{menuitem.image}}" alt="Menu Image"></div>
                     <div class="s-right">
                         <h5 class="mb-10">
                             <div class="title">
@@ -102,17 +104,64 @@
                         </h5>
                         <h6 class="mb-10">
                             <span class="icon-allergens" *ngFor="let allergen of menuitem.allergens">
-                                <img src="assets/images/{{allergen}}.svg"/>
+                                <img src="assets/images/{{allergen}}.svg" />
                             </span>
-                            <b *ngIf="isProductInOrder(menuitem)" class="btn-less float-right" (click)="removeOrderItem(menuitem)"><img src="assets/images/minus.svg"/></b>
-                            <b *ngIf="isProductInOrder(menuitem)" class="btn-amount float-right">{{getItemsInOrder(menuitem)}}</b>
-                            <b *ngIf="isProductInOrder(menuitem)" class="btn-more float-right" (click)="addOrderItem(menuitem)"><img src="assets/images/plus.svg"/></b>
-                            <b *ngIf="!isProductInOrder(menuitem)" class="btn-buy float-right" (click)="addOrderItem(menuitem)">LO QUIERO</b>
+                            <b *ngIf="isProductInOrder(menuitem)" class="btn-less float-right"
+                                (click)="removeOrderItem(menuitem)"><img src="assets/images/minus.svg" /></b>
+                            <b *ngIf="isProductInOrder(menuitem)"
+                                class="btn-amount float-right">{{getItemsInOrder(menuitem)}}</b>
+                            <b *ngIf="isProductInOrder(menuitem)" class="btn-more float-right"
+                                (click)="addOrderItem(menuitem)"><img src="assets/images/plus.svg" /></b>
+                            <b *ngIf="!isProductInOrder(menuitem)" class="btn-buy float-right"
+                                (click)="addOrderItem(menuitem)">LO QUIERO</b>
                         </h6>
                     </div>
                 </div>
             </div>
         </div>
+
+        <h6 class="center-text mt-40 mt-sm-20 mb-30 note-line">
+            <div>PRECIOS DE KILO POR PIEZA</div>            
+            &nbsp;
+            <div class="line">
+                <div class="col">Jamón puro 100x100 bellota</div>
+                <div class="push">&nbsp;</div>
+                <div class="col"> 65,00 € / kilo</div>
+            </div>
+            <div class="line">
+                <div class="col">Jamón bellota 75% bellota</div>
+                <div class="push">&nbsp;</div>
+                <div class="col"> 49,00 € / kilo</div>
+            </div>
+            <div class="line">
+                <div class="col">Jamón ibérico campo</div>
+                <div class="push">&nbsp;</div>
+                <div class="col"> 27,00 € / kilo</div>
+            </div>
+            <div class="line">
+                <div class="col">Jamón ibérico cebo</div>
+                <div class="push">&nbsp;</div>
+                <div class="col"> 20,00 € / kilo</div>
+            </div>
+            <div class="line">
+                <div class="col">Paleta bellota</div>
+                <div class="push">&nbsp;</div>
+                <div class="col"> 29,00 € / kilo</div>
+            </div>
+            <div class="line">
+                <div class="col">Paleta ibérica de campo</div>
+                <div class="push">&nbsp;</div>
+                <div class="col"> 19,00 € / kilo</div>
+            </div>
+            <div class="line">
+                <div class="col">Paleta ibérica de cebo</div>
+                <div class="push">&nbsp;</div>
+                <div class="col"> 16,00 € / kilo</div>
+            </div>
+            &nbsp;
+            <div>Se corta y se envasa al vacío en paquetes a elegir (100 g, 150g, 200g…) Se incrementa 30 € el Jamón
+                entero y 20€ la Paleta</div>
+        </h6>
 
         <div *ngIf="order && order.items && order.items.length > 0" class="order-container">
             <div class="line line--header">
@@ -125,11 +174,13 @@
             </div>
             <div class="line line--total">
                 <div class="col-product col-product--total">Gastos de envío *</div>
-                <div class="push col-price col-price--total">{{(getTotal() < limite_gastos ? gastos_envio : 0) | number:'1.2-2'}} €</div>
+                <div class="push col-price col-price--total">
+                    {{(getTotal() < limite_gastos ? gastos_envio : 0) | number:'1.2-2'}} €</div>
             </div>
             <div class="line line--total">
                 <div class="col-product col-product--total">TOTAL</div>
-                <div class="push col-price col-price--total">{{(getTotal() < limite_gastos ? getTotal() + gastos_envio : getTotal()) | number:'1.2-2'}} €</div>
+                <div class="push col-price col-price--total">
+                    {{(getTotal() < limite_gastos ? getTotal() + gastos_envio : getTotal()) | number:'1.2-2'}} €</div>
             </div>
             <br>
             <div class="line line--address">
@@ -138,7 +189,8 @@
             </div>
             <div class="line line--address">
                 <div class="col-label-order">Dirección</div>
-                <input [(ngModel)]="order.address" (ngModelChange)="checkClientInfo()" class="col-client-info" type="text">
+                <input [(ngModel)]="order.address" (ngModelChange)="checkClientInfo()" class="col-client-info"
+                    type="text">
             </div>
             <div class="line line--address">
                 <div class="col-label-order">Código Postal</div>
@@ -146,7 +198,8 @@
             </div>
             <div class="line line--address">
                 <div class="col-label-order">Forma de pago</div>
-                <select name="pay" id="pay" [(ngModel)]="order.pay" (ngModelChange)="checkClientInfo()" value="Metálico"  class="col-client-info">
+                <select name="pay" id="pay" [(ngModel)]="order.pay" (ngModelChange)="checkClientInfo()" value="Metálico"
+                    class="col-client-info">
                     <option value="Metálico">Metálico</option>
                     <option value="Tarjeta">Tarjeta</option>
                 </select>
@@ -171,7 +224,7 @@
             <div>
                 <div class="container-image">
                     <div class="overlay">
-                        <a target="_blank" href="{{getWhatsAppOrderLink()}}"> 
+                        <a target="_blank" href="{{getWhatsAppOrderLink()}}">
                             <img src="assets/images/whatsapp.png" class="icon">
                         </a>
                         <!-- <a href="tel:{{phone}}"> 
@@ -203,10 +256,16 @@
                     <h5 class="mt-20 product-title">{{menuitem.product}}</h5>
                     <h4 class="mt-5"><b>{{menuitem.price | number:'1.2-2'}} €</b></h4>
                     <h6 class="mt-20">
-                        <b *ngIf="isProductInOrder(menuitem)" class="btn-more btn-more--suggestions float-right" (click)="addOrderItem(menuitem)"><img class="img-20" src="assets/images/plus_light.svg"/></b>
-                        <b *ngIf="isProductInOrder(menuitem)" class="btn-amount btn-amount--suggestions float-right">{{getItemsInOrder(menuitem)}}</b>
-                        <b *ngIf="isProductInOrder(menuitem)" class="btn-less btn-less--suggestions float-right" (click)="removeOrderItem(menuitem)"><img class="img-20" src="assets/images/minus_light.svg"/></b>
-                        <b *ngIf="!isProductInOrder(menuitem)" class="btn-buy btn-buy--suggestions float-right" (click)="addOrderItem(menuitem)">LO QUIERO</b>
+                        <b *ngIf="isProductInOrder(menuitem)" class="btn-more btn-more--suggestions float-right"
+                            (click)="addOrderItem(menuitem)"><img class="img-20"
+                                src="assets/images/plus_light.svg" /></b>
+                        <b *ngIf="isProductInOrder(menuitem)"
+                            class="btn-amount btn-amount--suggestions float-right">{{getItemsInOrder(menuitem)}}</b>
+                        <b *ngIf="isProductInOrder(menuitem)" class="btn-less btn-less--suggestions float-right"
+                            (click)="removeOrderItem(menuitem)"><img class="img-20"
+                                src="assets/images/minus_light.svg" /></b>
+                        <b *ngIf="!isProductInOrder(menuitem)" class="btn-buy btn-buy--suggestions float-right"
+                            (click)="addOrderItem(menuitem)">LO QUIERO</b>
                     </h6>
                 </div>
             </div>
