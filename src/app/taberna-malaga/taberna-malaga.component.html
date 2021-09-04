@@ -45,6 +45,12 @@
                         </a>
                     </li>
                     <li>
+                        <a [ngClass]="selectedCategory=='SUGERENCIAS' ? 'active' : ''" href="" onclick="return false;"
+                            (click)="selectCategory('SUGERENCIAS')">
+                            <b>SUGERENCIAS</b>
+                        </a>
+                    </li>
+                    <li>
                         <a [ngClass]="selectedCategory=='VINOS' ? 'active' : ''" href=""
                             onclick="return false;" (click)="selectCategory('VINOS')">
                             <b>VINOS</b>
