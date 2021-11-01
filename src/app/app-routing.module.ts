@@ -8,8 +8,6 @@ import { TabernaMalagaEnComponent } from './taberna-malaga-en/taberna-malaga-en.
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'ha-malaga', component: HaMalagaComponent },
-  { path: 'tienda-malaga', component: HaMalagaComponent },
   { path: 'taberna-malaga', component: TabernaMalagaComponent },
   { path: 'taberna-malaga-en', component: TabernaMalagaEnComponent }
 ];

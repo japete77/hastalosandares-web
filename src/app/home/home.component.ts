@@ -33,7 +33,7 @@ export class HomeComponent {
       googlemap: 'https://goo.gl/maps/URWDS2U3xvsqW7iK7',
       whatsapp: '34667415298',
       phone: '951624274',
-      onlineshop: '/tienda-malaga', 
+      onlineshop: null, 
       tripadvisor: null,
       show: false
     },
