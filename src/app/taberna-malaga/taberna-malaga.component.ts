@@ -64,6 +64,8 @@ export class TabernaMalagaComponent implements OnInit {
   selectCategory(category: string) {
     this.selectedCategory = category
     if (this.selectedCategory == 'VINOS') this.selectedSize = 'TABLA'
+    else if (this.selectedCategory == 'CERVEZAS' || 
+        this.selectedCategory == 'REFRESCOS') this.selectedSize = 'MEDIA TABLA'
   }
 
   selectSize(size: string) {

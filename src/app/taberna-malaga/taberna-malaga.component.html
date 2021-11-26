@@ -56,11 +56,23 @@
                             <b>VINOS</b>
                         </a>
                     </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='CERVEZAS' ? 'active' : ''" href=""
+                            onclick="return false;" (click)="selectCategory('CERVEZAS')">
+                            <b>CERVEZAS</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a [ngClass]="selectedCategory=='REFRESCOS' ? 'active' : ''" href=""
+                            onclick="return false;" (click)="selectCategory('REFRESCOS')">
+                            <b>REFRESCOS</b>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <div *ngIf="selectedCategory != 'VINOS'" class="row">
+        <div *ngIf="selectedCategory != 'VINOS' && selectedCategory != 'CERVEZAS' && selectedCategory != 'REFRESCOS'" class="row">
             <div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-12">
@@ -117,7 +129,7 @@
                 </div>
             </div>
         </div>
-        
+                
         <div class="row">
             <div *ngFor="let menuitem of getProducts(selectedCategory, selectedSize)" class="col-md-6 food-menu pizza">
                 <div *ngIf="menuitem.price > 0" class="sided-90x mb-30">
