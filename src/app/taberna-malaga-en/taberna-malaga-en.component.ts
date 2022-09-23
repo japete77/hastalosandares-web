@@ -48,10 +48,17 @@ export class TabernaMalagaEnComponent implements OnInit {
         categoria: item.categoria,
         size: size,
         description: item.descripcion,
-        image: item.foto,
+        image: this.getImageBySize(item, size),
         allergens: item.alergenos
       }
     })
+  }
+
+  getImageBySize(item: MenuItem, size: string) {
+    return size == 'TAPA' ? item.foto_tapa : 
+           size == 'TOSTADA' ? item.foto_tostada : 
+           size == 'MEDIA TABLA' ? item.foto_media_tabla :
+           item.foto_tabla
   }
 
   getPriceBySize(item: MenuItem, size: string) {
